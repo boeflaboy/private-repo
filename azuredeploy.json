@@ -6,7 +6,7 @@
         "subscriptionId": "826f3e74-afed-4e2a-a617-bac0156dc992",
         "name": "python-web-app1234",
         "location": "East US",
-        "hostingPlanName": "ASP-automation-9d15",
+        "hostingPlanName": "ASP-automation-b8af",
         "serverFarmResourceGroup": "automation",
         "alwaysOn": "[bool('false')]",
         "ftpsState": "FtpsOnly",
