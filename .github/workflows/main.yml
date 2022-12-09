@@ -24,3 +24,5 @@ on: [push]
 
         # output containerName variable from template
       - run: echo ${{ steps.deploy.outputs.containerName }}
+
+ # Checkout code
