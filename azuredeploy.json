@@ -28,7 +28,7 @@
                         "hostType": "Standard"
                     },
                     {
-                        "name": "[concat(parameters('sites_python_web_app1234_name'), '.scm.azurewebsites.net')]",
+                        "name": "[concat(parameters('sites_python_web_app1234_name'), '.azurewebsites.net')]",
                         "sslState": "Disabled",
                         "hostType": "Repository"
                     }
