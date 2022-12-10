@@ -11,5 +11,6 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - uses: azure/arm-deploy@v1
       with:
+        subscriptionid: 826f3e74-afed-4e2a-a617-bac0156dc992
         resourceGroupName: automation
         template: ./azuredeploy.json
