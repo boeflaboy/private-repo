@@ -9,7 +9,7 @@
         "hostingPlanName": "ASP-automation-addd",
         "serverFarmResourceGroup": "automation",
         "ftpsState": "FtpsOnly",
-        "alwaysOn": "[bool('false')]",
+        "alwaysOn": false,
         "sku": "Basic",
         "skuCode": "B1",
         "workerSize": "0",
