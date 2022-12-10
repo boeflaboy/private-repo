@@ -3,49 +3,64 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "subscriptionId": {
-            "type": "string"
+            "type": "string",
+            "value": "826f3e74-afed-4e2a-a617-bac0156dc992"
         },
         "name": {
-            "type": "string"
+            "type": "string",
+            "value": "python-web-app1234"
         },
         "location": {
-            "type": "string"
+            "type": "string",
+            "value": "East US"
         },
         "hostingPlanName": {
-            "type": "string"
+            "type": "string",
+            "value": "ASP-automation-b6dd"
         },
         "serverFarmResourceGroup": {
-            "type": "string"
+            "type": "string",
+            "value": "automation"
         },
         "alwaysOn": {
-            "type": "bool"
+            "type": "bool",
+            "value": false
         },
         "ftpsState": {
-            "type": "string"
+            "type": "string",
+            "value": "FtpsOnly"
         },
         "sku": {
-            "type": "string"
+            "type": "string",
+            "value": "Basic"
         },
         "skuCode": {
-            "type": "string"
+            "type": "string",
+            "value": "B1"
         },
         "workerSize": {
-            "type": "string"
+            "type": "string",
+            "value": "0"
         },
         "workerSizeId": {
-            "type": "string"
+            "type": "string",
+            "value": "0"
         },
         "numberOfWorkers": {
-            "type": "string"
+            "type": "string",
+            "value": "1"
         },
         "linuxFxVersion": {
-            "type": "string"
+            "type": "string",
+             "value": "PYTHON|3.10"
         },
         "repoUrl": {
-            "type": "string"
+            "type": "string",
+            "value": "https://github.com/boeflaboy/private-repo"
         },
         "branch": {
-            "type": "string"
+            "type": "string",
+            "value": "main"
         }
     },
     "variables": {},
