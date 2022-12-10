@@ -5,9 +5,6 @@
     "parameters": {
         "sites_python_web_app1234_name": {
             "value": null
-        },
-        "serverfarms_ASP_automation_9759_externalid": {
-            "value": null
         }
     }
 }
