@@ -5,13 +5,11 @@
         "sites_python_web_app1234_name": {
             "defaultValue": "python-web-app1234",
             "type": "String"
-        },
-        "serverfarms_ASP_automation_9759_externalid": {
-            "defaultValue": "/subscriptions/826f3e74-afed-4e2a-a617-bac0156dc992/resourceGroups/automation/providers/Microsoft.Web/serverfarms/ASP-automation-9759",
-            "type": "String"
-        }
+        }     
     },
-    "variables": {},
+    "variables": {
+        "serverfarms_ASP_automation_9759_externalid": "/subscriptions/826f3e74-afed-4e2a-a617-bac0156dc992/resourceGroups/automation/providers/Microsoft.Web/serverfarms/ASP-automation-9759"
+    },
     "resources": [
         {
             "type": "Microsoft.Web/sites",
@@ -33,7 +31,7 @@
                         "hostType": "Repository"
                     }
                 ],
-                "serverFarmId": "[parameters('serverfarms_ASP_automation_9759_externalid')]",
+                "serverFarmId": "[variables('serverfarms_ASP_automation_9759_externalid')]",
                 "reserved": true,
                 "isXenon": false,
                 "hyperV": false,
