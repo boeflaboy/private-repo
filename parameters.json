@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "826f3e74-afed-4e2a-a617-bac0156dc992"
+        },
+        "name": {
+            "value": "python-web-app1234"
+        },
+        "location": {
+            "value": "East US"
+        },
+        "hostingPlanName": {
+            "value": "ASP-automation-bf0f"
+        },
+        "serverFarmResourceGroup": {
+            "value": "automation"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "ftpsState": {
+            "value": "FtpsOnly"
+        },
+        "sku": {
+            "value": "Basic"
+        },
+        "skuCode": {
+            "value": "B1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "linuxFxVersion": {
+            "value": "PYTHON|3.10"
+        },
+        "repoUrl": {
+            "value": "https://github.com/boeflaboy/private-repo"
+        },
+        "branch": {
+            "value": "main"
+        }
+    }
+}
