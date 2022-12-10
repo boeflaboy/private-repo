@@ -3,49 +3,49 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "subscriptionId": {
-            "value": "826f3e74-afed-4e2a-a617-bac0156dc992"
+            "type": "string"
         },
         "name": {
-            "value": "python-web-app1234"
+            "type": "string"
         },
         "location": {
-            "value": "East US"
+            "type": "string"
         },
         "hostingPlanName": {
-            "value": "ASP-automation-b6dd"
+            "type": "string"
         },
         "serverFarmResourceGroup": {
-            "value": "automation"
+            "type": "string"
         },
         "alwaysOn": {
-            "value": false
+            "type": "bool"
         },
         "ftpsState": {
-            "value": "FtpsOnly"
+            "type": "string"
         },
         "sku": {
-            "value": "Basic"
+            "type": "string"
         },
         "skuCode": {
-            "value": "B1"
+            "type": "string"
         },
         "workerSize": {
-            "value": "0"
+            "type": "string"
         },
         "workerSizeId": {
-            "value": "0"
+            "type": "string"
         },
         "numberOfWorkers": {
-            "value": "1"
+            "type": "string"
         },
         "linuxFxVersion": {
-             "value": "PYTHON|3.10"
+            "type": "string"
         },
         "repoUrl": {
-            "value": "https://github.com/boeflaboy/private-repo"
+            "type": "string"
         },
         "branch": {
-            "value": "main"
+            "type": "string"
         }
     },
     "variables": {},
