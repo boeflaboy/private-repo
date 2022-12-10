@@ -48,6 +48,7 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
+      - uses: actions/checkout@v2
     
       - uses: azure/login@v1
         with:
@@ -66,6 +67,8 @@ jobs:
         with:
           name: python-app
           path: .
+          
+      
           
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
