@@ -20,3 +20,4 @@
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           resourceGroupName: automation
           template: ./azuredeploy.json
+          parameters: ./parameters.json
