@@ -8,7 +8,7 @@
         "location": "East US",
         "hostingPlanName": "ASP-automation-addd",
         "serverFarmResourceGroup": "automation",
-        "ftpsState": "FtpsOnly",
+        "ftpsState": "Disabled",
         "alwaysOn": false,
         "sku": "Basic",
         "skuCode": "B1",
