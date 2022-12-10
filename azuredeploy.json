@@ -1,4 +1,3 @@
-
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
@@ -27,6 +26,11 @@
                         "name": "[concat(parameters('sites_python_web_app1234_name'), '.azurewebsites.net')]",
                         "sslState": "Disabled",
                         "hostType": "Standard"
+                    },
+                    {
+                        "name": "[concat(parameters('sites_python_web_app1234_name'), '.scm.azurewebsites.net')]",
+                        "sslState": "Disabled",
+                        "hostType": "Repository"
                     }
                 ],
                 "serverFarmId": "[parameters('serverfarms_ASP_automation_9759_externalid')]",
