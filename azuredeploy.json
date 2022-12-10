@@ -1,36 +1,66 @@
 {
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
-    "variables": {
-        "subscriptionId": "826f3e74-afed-4e2a-a617-bac0156dc992",
-        "name": "python-web-app1234",
-        "location": "East US",
-        "hostingPlanName": "ASP-automation-addd",
-        "serverFarmResourceGroup": "automation",
-        "ftpsState": "Disabled",
-        "alwaysOn": false,
-        "sku": "Basic",
-        "skuCode": "B1",
-        "workerSize": "0",
-        "workerSizeId": "0",
-        "numberOfWorkers": "1",
-        "linuxFxVersion": "PYTHON|3.10",
-        "repoUrl": "https://github.com/boeflaboy/private-repo",
-        "branch": "main"
+    "parameters": {
+        "subscriptionId": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "hostingPlanName": {
+            "type": "string"
+        },
+        "serverFarmResourceGroup": {
+            "type": "string"
+        },
+        "alwaysOn": {
+            "type": "bool"
+        },
+        "ftpsState": {
+            "type": "string"
+        },
+        "sku": {
+            "type": "string"
+        },
+        "skuCode": {
+            "type": "string"
+        },
+        "workerSize": {
+            "type": "string"
+        },
+        "workerSizeId": {
+            "type": "string"
+        },
+        "numberOfWorkers": {
+            "type": "string"
+        },
+        "linuxFxVersion": {
+            "type": "string"
+        },
+        "repoUrl": {
+            "type": "string"
+        },
+        "branch": {
+            "type": "string"
+        }
     },
+    "variables": {},
     "resources": [
         {
             "apiVersion": "2018-11-01",
-            "name": "[variables('name')]",
+            "name": "[parameters('name')]",
             "type": "Microsoft.Web/sites",
-            "location": "[variables('location')]",
-            "tags": {},
+            "location": "[parameters('location')]",
+            "tags": null,
             "dependsOn": [
-                "[concat('Microsoft.Web/serverfarms/', variables('hostingPlanName'))]"
+                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
             ],
             "properties": {
-                "name": "[variables('name')]",
+                "name": "[parameters('name')]",
                 "siteConfig": {
                     "appSettings": [
                         {
@@ -38,11 +68,11 @@
                             "value": "1"
                         }
                     ],
-                    "linuxFxVersion": "[variables('linuxFxVersion')]",
-                    "alwaysOn": "[variables('alwaysOn')]",
-                    "ftpsState": "[variables('ftpsState')]"
+                    "linuxFxVersion": "[parameters('linuxFxVersion')]",
+                    "alwaysOn": "[parameters('alwaysOn')]",
+                    "ftpsState": "[parameters('ftpsState')]"
                 },
-                "serverFarmId": "[concat('/subscriptions/', variables('subscriptionId'),'/resourcegroups/', variables('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', variables('hostingPlanName'))]",
+                "serverFarmId": "[concat('/subscriptions/', parameters('subscriptionId'),'/resourcegroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
                 "clientAffinityEnabled": false,
                 "virtualNetworkSubnetId": null,
                 "httpsOnly": true
@@ -53,8 +83,8 @@
                     "name": "web",
                     "apiVersion": "2020-12-01",
                     "properties": {
-                        "RepoUrl": "[variables('repoUrl')]",
-                        "branch": "[variables('branch')]",
+                        "RepoUrl": "[parameters('repoUrl')]",
+                        "branch": "[parameters('branch')]",
                         "IsManualIntegration": false,
                         "deploymentRollbackEnabled": false,
                         "isMercurial": false,
@@ -75,30 +105,30 @@
                         }
                     },
                     "dependsOn": [
-                        "[resourceId('Microsoft.Web/Sites', variables('name'))]"
+                        "[resourceId('Microsoft.Web/Sites', parameters('name'))]"
                     ]
                 }
             ]
         },
         {
             "apiVersion": "2018-11-01",
-            "name": "[variables('hostingPlanName')]",
+            "name": "[parameters('hostingPlanName')]",
             "type": "Microsoft.Web/serverfarms",
-            "location": "[variables('location')]",
+            "location": "[parameters('location')]",
             "kind": "linux",
-            "tags": {},
+            "tags": null,
             "dependsOn": [],
             "properties": {
-                "name": "[variables('hostingPlanName')]",
-                "workerSize": "[variables('workerSize')]",
-                "workerSizeId": "[variables('workerSizeId')]",
-                "numberOfWorkers": "[variables('numberOfWorkers')]",
+                "name": "[parameters('hostingPlanName')]",
+                "workerSize": "[parameters('workerSize')]",
+                "workerSizeId": "[parameters('workerSizeId')]",
+                "numberOfWorkers": "[parameters('numberOfWorkers')]",
                 "reserved": true,
                 "zoneRedundant": false
             },
             "sku": {
-                "Tier": "[variables('sku')]",
-                "Name": "[variables('skuCode')]"
+                "Tier": "[parameters('sku')]",
+                "Name": "[parameters('skuCode')]"
             }
         }
     ]
