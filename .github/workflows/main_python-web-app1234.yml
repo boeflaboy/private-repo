@@ -48,20 +48,11 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      - uses: actions/checkout@v2
-    
-      - uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-          
-         
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
           name: python-app
           path: .
-          
-      
           
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -69,4 +60,4 @@ jobs:
         with:
           app-name: 'python-web-app1234'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B13B5F543C9047E38F1CF9A05853E098 }}
